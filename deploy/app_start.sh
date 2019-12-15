@@ -1,3 +1,3 @@
 #!/bin/bash
 
-FLASK_APP="/var/www/FlaskAPI/APP/app.py" flask run
+FLASK_APP="/home/ec2-user/FlaskAPI/APP/application.py" flask run
