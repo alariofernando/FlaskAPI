@@ -3,6 +3,8 @@ os: linux
 files:
   - source: /
     destination: /var/www/
+  - source: /requirements.txt
+    destination: /home/ec2-user/
 hooks:
   ApplicationStop:
     - location: deploy/app_stop.sh
