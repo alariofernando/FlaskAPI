@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo yum install python3.7.1
+sudo yum install python3
 pip3 install -r requirements.txt
