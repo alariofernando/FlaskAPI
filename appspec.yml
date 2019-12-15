@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/
+hooks:
+  ApplicationStop:
+    - location: deploy/app_stop.sh
+      timeout: 60
+      runas: root
+  BeforeInstall:
+    - location: deploy/install_dependencies.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: deploy/change_permissions.sh
+      timeout: 60
+      runas: root
+  ApplicationStart:
+    - location: deploy/app_start.sh
+      timeout: 60
+      runas: root
