@@ -3,8 +3,7 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/FlaskAPI
-  - source: requirements.txt
-    destination: /home/ec2-user/FlaskAPI
+
 permissions:
   - object: /home/ec2-user/FlaskAPI/APP/application.py
     owner: root
